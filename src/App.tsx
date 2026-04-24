@@ -161,7 +161,7 @@ export default function App() {
                 <div className="flex gap-3">
                    <button 
                     onClick={() => setShowAiGen(true)}
-                    className="flex items-center gap-2 bg-brand-olive text-white px-6 py-3 rounded-full hover:bg-opacity-90 transition-all font-medium"
+                    className="flex items-center gap-2 bg-orange-600 text-white px-6 py-3 rounded-full hover:bg-orange-700 transition-all font-medium shadow-lg shadow-orange-200"
                    >
                     <Brain className="w-4 h-4" />
                     AI Gợi ý món
