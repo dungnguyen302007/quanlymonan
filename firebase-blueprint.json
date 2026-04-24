@@ -1,0 +1,30 @@
+{
+  "entities": {
+    "recipe": {
+      "title": "Recipe",
+      "description": "A vegetarian recipe.",
+      "type": "object",
+      "properties": {
+        "title": { "type": "string" },
+        "image": { "type": "string" },
+        "time": { "type": "string" },
+        "servings": { "type": "number" },
+        "difficulty": { "type": "string", "enum": ["Dễ", "Trung bình", "Khó"] },
+        "calories": { "type": "number" },
+        "protein": { "type": "number" },
+        "tags": { "type": "array", "items": { "type": "string" } },
+        "ingredients": { "type": "array", "items": { "type": "string" } },
+        "instructions": { "type": "array", "items": { "type": "string" } },
+        "authorId": { "type": "string" },
+        "createdAt": { "type": "string", "format": "date-time" }
+      },
+      "required": ["title", "time", "authorId"]
+    }
+  },
+  "firestore": {
+    "recipes": {
+      "schema": "recipe",
+      "description": "Collection of vegetarian recipes."
+    }
+  }
+}
